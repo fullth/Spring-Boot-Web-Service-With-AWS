@@ -1,4 +1,4 @@
-package com.fullth.web.springboot.service;
+package com.fullth.web.springboot.config.auth;
 
 import com.fullth.web.springboot.config.auth.dto.OAuthAttributes;
 import com.fullth.web.springboot.config.auth.dto.SessionUser;

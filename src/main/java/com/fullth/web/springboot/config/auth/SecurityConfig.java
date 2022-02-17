@@ -1,7 +1,6 @@
 package com.fullth.web.springboot.config.auth;
 
 import com.fullth.web.springboot.domain.user.Role;
-import com.fullth.web.springboot.service.CustomOAuth2UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
