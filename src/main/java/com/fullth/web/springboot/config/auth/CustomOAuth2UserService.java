@@ -5,6 +5,7 @@ import com.fullth.web.springboot.config.auth.dto.SessionUser;
 import com.fullth.web.springboot.domain.user.User;
 import com.fullth.web.springboot.domain.user.UserRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.oauth2.client.userinfo.DefaultOAuth2UserService;
 import org.springframework.security.oauth2.client.userinfo.OAuth2UserRequest;
@@ -21,7 +22,9 @@ import java.util.Collections;
 @Service
 public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequest, OAuth2User> {
 
+    @Autowired
     private final UserRepository userRepository;
+
     private final HttpSession httpSession;
 
     @Override
