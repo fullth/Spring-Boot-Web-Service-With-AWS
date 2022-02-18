@@ -4,7 +4,7 @@ import com.fullth.web.springboot.config.auth.dto.OAuthAttributes;
 import com.fullth.web.springboot.config.auth.dto.SessionUser;
 import com.fullth.web.springboot.domain.user.User;
 import com.fullth.web.springboot.domain.user.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.oauth2.client.userinfo.DefaultOAuth2UserService;
 import org.springframework.security.oauth2.client.userinfo.OAuth2UserRequest;
@@ -17,17 +17,12 @@ import org.springframework.stereotype.Service;
 import javax.servlet.http.HttpSession;
 import java.util.Collections;
 
+@RequiredArgsConstructor
 @Service
 public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequest, OAuth2User> {
 
     private final UserRepository userRepository;
     private final HttpSession httpSession;
-
-    @Autowired
-    public CustomOAuth2UserService(UserRepository userRepository, HttpSession httpSession) {
-        this.userRepository = userRepository;
-        this.httpSession = httpSession;
-    }
 
     @Override
     public OAuth2User loadUser(OAuth2UserRequest userRequest) throws OAuth2AuthenticationException {
