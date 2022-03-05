@@ -9,7 +9,7 @@ cp $REPOSITORY/zip/*.jar $REPOSITORY/
 
 echo "> 현재 구동중인 애플리케이션의 프로세스 아이디를 확인합니다."
 
-CURRENT_PID=$(pgrep -fl Spring-Boot-Web-Service-With-AWS | grep jar | awk '{print $1}')
+CURRENT_PID=$(pgrep -fl Spring-Boot-Web-Service-With-AWS)
 
 echo "현재 구동중인 어플리케이션 pid: $CURRENT_PID"
 
