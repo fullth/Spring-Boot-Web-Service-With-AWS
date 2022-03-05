@@ -1,4 +1,4 @@
-package com.fullth.web.springboot.domain.posts;
+package com.fullth.web.springboot.domain;
 
 import lombok.Getter;
 import org.springframework.data.annotation.CreatedDate;
@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 @Getter
 @MappedSuperclass // 해당 클래스를 상속할 경우 필드들도 칼럼으로 인식시켜줌
 @EntityListeners(AuditingEntityListener.class) // 해당 클래스에 Auditing 기능을 포함시킴
-public class BaseTimeEntity {
+public abstract class BaseTimeEntity {
 
     @CreatedDate
     private LocalDateTime createdDate;

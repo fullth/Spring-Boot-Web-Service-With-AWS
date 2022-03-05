@@ -1,6 +1,6 @@
 package com.fullth.web.springboot.domain.user;
 
-import com.fullth.web.springboot.domain.posts.BaseTimeEntity;
+import com.fullth.web.springboot.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
