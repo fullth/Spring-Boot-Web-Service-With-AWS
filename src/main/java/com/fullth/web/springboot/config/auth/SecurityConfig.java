@@ -19,7 +19,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             .headers().frameOptions().disable() // h2-console 사용하기 위해 비활성화
             .and()
                 .authorizeRequests()
-                .mvcMatchers("/", "/css/**", "/images/**", "/js/**", "/h2-console/**").permitAll()
+                .mvcMatchers("/", "/css/**", "/images/**", "/js/**", "/h2-console/**", "/profile").permitAll()
                 .mvcMatchers("/api/v1/**").hasRole(Role.USER.name())
                 .anyRequest().authenticated()
             .and()
