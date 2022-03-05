@@ -3,14 +3,14 @@ package com.fullth.web.springboot.domain.posts;
 import com.fullth.web.springboot.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 @Getter
+@NoArgsConstructor
 @Entity
 public class Posts extends BaseTimeEntity {
-
-    public Posts() {}
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
