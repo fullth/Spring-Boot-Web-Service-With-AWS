@@ -6,6 +6,7 @@ import com.fullth.web.springboot.dto.PostsListResponseDto;
 import com.fullth.web.springboot.dto.PostsResponseDto;
 import com.fullth.web.springboot.dto.PostsSaveRequestDto;
 import com.fullth.web.springboot.dto.PostsUpdateRequestDto;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -14,11 +15,9 @@ import java.util.stream.Collectors;
 
 @Service
 public class PostsService {
-    private final PostsRepository postsRepository;
 
-    public PostsService(PostsRepository postsRepository) {
-        this.postsRepository = postsRepository;
-    }
+    @Autowired
+    private PostsRepository postsRepository;
 
     @Transactional
     public Long save(PostsSaveRequestDto requestDto) {
